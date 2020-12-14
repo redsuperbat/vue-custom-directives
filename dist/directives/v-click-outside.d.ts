@@ -1,8 +1,9 @@
+import { DirectiveBinding } from "vue";
 declare const vClickOutside: {
-    mounted(el: ClickableEl, binding: any): void;
+    mounted(el: ClickableEl, binding: DirectiveBinding): void;
     unmounted(el: ClickableEl): void;
 };
-interface ClickableEl extends Element {
+export interface ClickableEl extends Element {
     clickEvent: (e: Event) => void;
 }
 export default vClickOutside;

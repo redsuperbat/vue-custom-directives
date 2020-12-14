@@ -12,11 +12,11 @@ const properties = {
     callback: undefined,
 };
 const vHover = {
-    beforeMount(el, dir) {
-        if (!dir.value) {
+    beforeMount(el, binding) {
+        if (!binding.value) {
             throw new Error("Callback missing in directive");
         }
-        properties.callback = dir.value;
+        properties.callback = binding.value;
         el.addEventListener("mouseenter", properties.onMouseEnter);
         el.addEventListener("mouseleave", properties.onMouseLeave);
     },

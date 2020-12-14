@@ -12,3 +12,11 @@ const v_scroll_1 = __importDefault(require("./directives/v-scroll"));
 exports.vScroll = v_scroll_1.default;
 const v_click_outside_1 = __importDefault(require("./directives/v-click-outside"));
 exports.vClickOutside = v_click_outside_1.default;
+exports.default = {
+    install(app) {
+        app.directive("v-expand", v_expand_1.default);
+        app.directive("v-hover", v_hover_1.default);
+        app.directive("v-scroll", v_scroll_1.default);
+        app.directive("v-click-outside", v_click_outside_1.default);
+    },
+};

@@ -1,7 +1,8 @@
+import { DirectiveBinding } from "vue";
 import { upperFirst } from "../utils/";
 
-type directions = "x" | "y";
-type offsets = "offsetHeight" | "offsetWidth";
+export type directions = "x" | "y";
+export type offsets = "offsetHeight" | "offsetWidth";
 
 const properties = {
   offset: "" as keyof HTMLElement,
@@ -36,7 +37,7 @@ function step(
 }
 
 const vExpand = {
-  beforeMount(el: HTMLElement, binding) {
+  beforeMount(el: HTMLElement, binding: DirectiveBinding) {
     if (!binding.arg) {
       throw Error("Must specify x or y direction");
     }

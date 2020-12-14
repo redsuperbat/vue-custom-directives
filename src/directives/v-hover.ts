@@ -1,4 +1,6 @@
-type cb = ((bool: boolean) => void) | undefined;
+import { DirectiveBinding } from "vue";
+
+export type cb = ((bool: boolean) => void) | undefined;
 
 const properties = {
   onMouseEnter() {
@@ -11,11 +13,11 @@ const properties = {
 };
 
 const vHover = {
-  beforeMount(el: HTMLElement, dir) {
-    if (!dir.value) {
+  beforeMount(el: HTMLElement, binding: DirectiveBinding) {
+    if (!binding.value) {
       throw new Error("Callback missing in directive");
     }
-    properties.callback = dir.value;
+    properties.callback = binding.value;
     el.addEventListener("mouseenter", properties.onMouseEnter);
     el.addEventListener("mouseleave", properties.onMouseLeave);
   },
