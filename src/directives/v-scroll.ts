@@ -1,5 +1,3 @@
-import { Directive } from "vue";
-
 const animatedScrollObserver = new IntersectionObserver(
   (entries, animatedScrollObserver) => {
     entries.forEach((entry) => {
@@ -16,7 +14,7 @@ interface CallbackEl extends Element {
   callback: (el: Element) => void;
 }
 
-const vScroll: Directive = {
+const vScroll = {
   beforeMount(el: CallbackEl, binding) {
     el.callback = binding.value;
     animatedScrollObserver.observe(el);

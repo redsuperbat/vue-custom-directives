@@ -1,7 +1,5 @@
-import { Directive } from "vue";
-
-const vClickOutside: Directive = {
-  mounted(el: ClickableEl, binding) {
+const vClickOutside = {
+  mounted(el: ClickableEl, binding: any) {
     el.clickEvent = function (e: Event) {
       // Checking the click was not on the element nor it's children
       if (!(el == e.target || el.contains(e.target as Node))) {
