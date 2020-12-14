@@ -1,12 +1,12 @@
 {
-  "name": "vue-custom-directives",
-  "version": "1.0.0",
+  "name": "vue-directives-rsb",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf ./dist && tsc",
-    "deploy": "func() { npm run build && git add . && git commit -m \"$1\" && git push origin master; }; func"
+    "deploy": "npm run build && npm publish"
   },
   "files": [
     "dist"
