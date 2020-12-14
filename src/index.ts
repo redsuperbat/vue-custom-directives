@@ -8,9 +8,9 @@ export { vExpand, vHover, vScroll, vClickOutside };
 
 export default {
   install(app: App) {
-    app.directive("v-expand", vExpand);
-    app.directive("v-hover", vHover);
-    app.directive("v-scroll", vScroll);
-    app.directive("v-click-outside", vClickOutside);
+    app.directive("expand", vExpand);
+    app.directive("hover", vHover);
+    app.directive("scroll", vScroll);
+    app.directive("click-outside", vClickOutside);
   },
 };
