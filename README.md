@@ -13,14 +13,14 @@ These are useful directives that you can include into your vue application.
 
 ## Installation
 
-`npm i --save vue-custom-directives`
+`npm i --save vue3-directives`
 
 To only use certain directives and reduce bundle size, register your directives show below.
 
 ```javascript
 import { createApp } from "vue";
 import App from "./App.vue";
-import { vHover } from "vue-custom-directives";
+import { vHover } from "vue3-directives";
 
 createApp(App).directive(vHover).mount("#app");
 ```
@@ -32,7 +32,7 @@ There is a quicker way to register all directives if you are going to use them:
 ```javascript
 import { createApp } from "vue";
 import App from "./App.vue";
-import VueCustomDirectives from "vue-custom-directives";
+import VueCustomDirectives from "vue3-directives";
 
 createApp(App).use(VueCustomDirectives).mount("#app");
 ```
@@ -46,7 +46,7 @@ This will make all directives accessible throughout your application
 ```html
 <template>
   <div id="main" style="width: 500px; height: 500px">
-    <p v-click-outside="clickedOutside">Vue Custom Directives are awesome!</p>
+    <p v-click-outside="clickedOutside">Vue 3 Directives is awesome!</p>
   </div>
 </template>
 
@@ -70,7 +70,7 @@ This will make all directives accessible throughout your application
 ```html
 <template>
   <div id="main" style="width: 500px; height: 500px">
-    <p v-hover="onHover">Vue Custom Directives are awesome!</p>
+    <p v-hover="onHover">Vue 3 Directives is awesome!</p>
   </div>
 </template>
 
@@ -97,7 +97,7 @@ v-expand can take two different arguments `v-expand:x` and `v-expand:y` dependin
 ```html
 <template>
   <div id="main" style="width: 500px; height: 500px">
-    <p v-expand:y v-if="show">Vue Custom Directives are awesome!</p>
+    <p v-expand:y v-if="show">Vue 3 Directives is awesome!</p>
     <button @click="toggleText">click me!</button>
   </div>
 </template>
@@ -124,7 +124,7 @@ v-expand can take two different arguments `v-expand:x` and `v-expand:y` dependin
 ```html
 <template>
   <div id="main" style="width: 500px; height: 500px">
-    <p v-scroll="onEnter">Vue Custom Directives are awesome!</p>
+    <p v-scroll="onEnter">Vue 3 Directives is awesome!</p>
   </div>
 </template>
 
