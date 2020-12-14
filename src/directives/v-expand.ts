@@ -26,7 +26,6 @@ function step(
   } else {
     sizeOffset = `${Math.min(0.5 * elapsed, endOffset)}px`;
   }
-  console.log({ sizeOffset, elapsed });
   el.style[properties.size] = sizeOffset;
   if (elapsed < 500) {
     // Stop the animation after .5 seconds
