@@ -1,8 +1,8 @@
-# Vue Custom Directives
+# Vue 3 Directives
 
 ## Description
 
-These are useful directives that you can include into your vue application
+These are useful directives that you can include into your vue application.
 
 | Directive       | Description                                                                                                                                                                                 |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -15,8 +15,7 @@ These are useful directives that you can include into your vue application
 
 `npm i --save vue-custom-directives`
 
-To only use certain directives and reduce bundle size, register your directives like this.
-Now `v-hover` is available throughout your vue application
+To only use certain directives and reduce bundle size, register your directives show below.
 
 ```javascript
 import { createApp } from "vue";
@@ -25,6 +24,8 @@ import { vHover } from "vue-custom-directives";
 
 createApp(App).directive(vHover).mount("#app");
 ```
+
+After registering `v-hover` is available throughout your entire vue application
 
 There is a quicker way to register all directives if you are going to use them:
 
@@ -36,7 +37,7 @@ import VueCustomDirectives from "vue-custom-directives";
 createApp(App).use(VueCustomDirectives).mount("#app");
 ```
 
-This will make all directives useable in your application
+This will make all directives accessible throughout your application
 
 ## Usage
 
@@ -91,7 +92,7 @@ This will make all directives useable in your application
 ### v-expand
 
 The p element will animate when the button is clicked to show the text.
-v-expand takes two arguments `v-expand:x` and `v-expand:y` depending on if you want the element to animate in from the x-axis or the y-axis
+v-expand can take two different arguments `v-expand:x` and `v-expand:y` depending on if you want the element to animate in from the x-axis or the y-axis
 
 ```html
 <template>
